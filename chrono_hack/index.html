@@ -32,8 +32,9 @@
    "organizer":{"@type":"Organization","name":"Club Scientifique de l'ESI","email":"cse@esi.dz"}}
   </script>
   <style>
-    /* Une seule "page" visible à la fois (si JS actif) */
-    .js [data-page]:not(.is-active){display:none}
+    /* Défilement fluide vers les sections */
+    html{scroll-behavior:smooth}
+    [id]{scroll-margin-top:80px} /* ajuste selon la hauteur de ton menu fixe */
     .skip-link{position:absolute;left:-9999px}
     .skip-link:focus{left:1rem;top:1rem;z-index:100}
   </style>
@@ -229,29 +230,5 @@
       </ul>
     </div>
   </footer>
-  <script>
-    // Navigation par pages : affiche la section [data-page] correspondant au lien cliqué / au #hash
-    (() => {
-      const pages = [...document.querySelectorAll('[data-page]')], ids = pages.map(p => p.id);
-      const links = [...document.querySelectorAll('nav a[href^="#"]')];
-      function show(id) {
-        pages.forEach(p => p.classList.toggle('is-active', p.id === id));
-        links.forEach(a => a.getAttribute('href') === '#' + id ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
-        window.scrollTo(0, 0);
-      }
-      const fromHash = () => { const h = location.hash.slice(1); return ids.includes(h) ? h : ids[0]; };
-      document.documentElement.classList.add('js');
-      // Clic sur un lien interne : phase "capture" = passe avant les autres scripts (ex. scroll fluide)
-      document.addEventListener('click', e => {
-        const a = e.target.closest('a[href^="#"]');
-        const id = a && a.getAttribute('href').slice(1);
-        if (!ids.includes(id)) return;                // #main (skip link) etc. : comportement normal
-        e.preventDefault(); e.stopImmediatePropagation();
-        if (location.hash === '#' + id) show(id); else location.hash = id;   // déclenche "hashchange"
-      }, true);
-      addEventListener('hashchange', () => show(fromHash()));  // clics, boutons précédent / suivant
-      show(fromHash());
-    })();
-  </script>
 </body>
 </html>
