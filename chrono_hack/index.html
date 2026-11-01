@@ -1,234 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chrono Hack – The clock stopped working</title>
-  <meta name="description" content="A three-day, team-based hackathon combining technical challenges, data analysis, algorithms and software development in a time-travel storyline.">
-  <meta name="theme-color" content="#1b2250">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="style.css">
- 
-  <!-- Aperçu au partage : remplace TON-SITE.dz par l'URL du site -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Chrono Hack – The clock stopped working">
-  <meta property="og:description" content="A three-day hackathon at ESI Algiers, 18–20 March 2027, in a time-travel storyline.">
-  <meta property="og:image" content="https://TON-SITE.dz/assets/og-image.png">
-  <meta property="og:url" content="https://TON-SITE.dz/">
-  <meta name="twitter:card" content="summary_large_image">
- 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&display=swap">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
- 
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Event","name":"Chrono Hack",
-   "description":"A three-day, team-based hackathon combining technical challenges, data analysis, algorithms and software development in a time-travel storyline.",
-   "startDate":"2027-03-18","endDate":"2027-03-20",
-   "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled",
-   "location":{"@type":"Place","name":"ESI Algiers","address":{"@type":"PostalAddress","addressLocality":"Algiers","addressCountry":"DZ"}},
-   "organizer":{"@type":"Organization","name":"Club Scientifique de l'ESI","email":"cse@esi.dz"}}
-  </script>
-  <style>
-    /* Défilement fluide vers les sections */
-    html{scroll-behavior:smooth}
-    [id]{scroll-margin-top:80px} /* ajuste selon la hauteur de ton menu fixe */
-    .skip-link{position:absolute;left:-9999px}
-    .skip-link:focus{left:1rem;top:1rem;z-index:100}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chrono Hack – The clock stopped working</title>
+<meta name="description" content="A three-day, team-based hackathon combining technical challenges, data analysis, algorithms and software development in a time-travel storyline.">
+<meta name="theme-color" content="#1b2250">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+
+<!-- Share preview: replace TON-SITE.dz with the real site URL -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chrono Hack – The clock stopped working">
+<meta property="og:description" content="A three-day hackathon at ESI Algiers, 18–20 March 2027, in a time-travel storyline.">
+<meta property="og:image" content="https://TON-SITE.dz/assets/og-image.png">
+<meta property="og:url" content="https://TON-SITE.dz/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Rye&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"Chrono Hack",
+ "description":"A three-day, team-based hackathon combining technical challenges, data analysis, algorithms and software development in a time-travel storyline.",
+ "startDate":"2027-03-18","endDate":"2027-03-20",
+ "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled",
+ "location":{"@type":"Place","name":"ESI Algiers","address":{"@type":"PostalAddress","addressLocality":"Algiers","addressCountry":"DZ"}},
+ "organizer":{"@type":"Organization","name":"Club Scientifique de l'ESI","email":"cse@esi.dz"}}
+</script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to content</a>
- 
-  <header class="site-header" id="top">
-    <a href="#hero" class="logo"><img src="assets/logo-chronohack.png" alt="Chrono Hack" width="120" height="48"></a>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
-    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="#hero" aria-current="page">Home</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#stages">Stages</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-      <!-- TODO : vrai lien d'inscription (le même pour les 2 boutons Register) -->
-      <a href="https://forms.gle/TON-LIEN" target="_blank" rel="noopener" class="btn btn-small">Register</a>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="nav__bar">
+    <a href="#top" class="nav__logo"><img src="assets/logo_chronohack.png" data-fb="59848.png" alt="Chrono Hack logo"></a>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
+    <nav class="nav__links" id="primary-navigation" aria-label="Main navigation">
+      <a href="#top" aria-current="page">Home</a>
+      <a href="#about">About us</a>
+      <a href="#stages">Stages</a>
+      <a href="#faq">FAQ</a>
+      <!-- TODO: real registration link (same one for both Register buttons) -->
+      <a href="https://forms.gle/TON-LIEN" target="_blank" rel="noopener" class="btn btn--sm">Register</a>
     </nav>
-  </header>
- 
-  <main id="main">
- 
-    <section class="hero" id="hero" data-page>
-      <div class="gear gear-1" aria-hidden="true"></div><div class="gear gear-2" aria-hidden="true"></div><div class="gear gear-3" aria-hidden="true"></div>
- 
-      <div class="hero-content">
-        <h1>The clock stopped working</h1>
-        <p class="hero-text">A three-day, team-based hackathon where technical challenges, data analysis and software development meet an immersive time-travel storyline.</p>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero">
+    <img class="deco" style="left:535px;top:46px;width:131px;transform:rotate(-10deg)" src="assets/gear-ring-sand.png" data-fb="42998.png" alt="" aria-hidden="true">
+    <img class="deco" style="right:-20px;top:-30px;width:109px;transform:rotate(-15deg)" src="assets/gear-sand.png" data-fb="bc347.png" alt="" aria-hidden="true">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <h1 class="display">The clock <em>stopped working</em></h1>
+        <p class="lead">A three-day, team-based hackathon where technical challenges, data analysis and software development meet an immersive time-travel storyline.</p>
         <a href="https://forms.gle/TON-LIEN" target="_blank" rel="noopener" class="btn">Register now</a>
- 
-        <ul class="hero-info">
-          <li><span class="info-label">Date</span> <span class="info-value"><time datetime="2027-03-18">18</time> – <time datetime="2027-03-20">20 March 2027</time></span></li>
-          <li><span class="info-label">Venue</span> <span class="info-value">ESI.Algiers</span></li>
-          <li><span class="info-label">Format</span> <span class="info-value">3 days hackathon</span></li>
-        </ul>
+        <dl class="facts">
+          <div><dt>Date</dt><dd>18 - 20<br>march<br>2027</dd></div>
+          <div><dt>Venue</dt><dd>Esi,<br>Algiers</dd></div>
+          <div><dt>Format</dt><dd>3 days ·<br>Hackathon</dd></div>
+        </dl>
       </div>
- 
-      <div class="hero-visual"><img src="assets/pocket-watch.svg" alt="Stopped pocket watch" class="pocket-watch" width="480" height="600" fetchpriority="high"></div>
-    </section>
- 
-    <section class="about" id="about" data-page>
-      <header class="section-header"><span class="section-number">01</span> <span class="section-name">About</span></header>
- 
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>When the AI rewrites the past.</h2>
-          <p class="about-lead">Set in a future where an artificial intelligence system has destabilized the timeline, Chrono Hack challenges you to investigate the incident, recover critical information, corrupted historical records and build a software solution to prevent reality from collapsing.</p>
-          <p>Chrono Hack is a three-day, team-based hackathon hosted at ESI from 18 to 20 March 2027. It welcomes 120 students passionate about computer science, programming, cybersecurity, data analysis, algorithms and software development. The whole experience runs on a custom-built interactive website that acts as the event's virtual time machine, with the challenges, datasets and stages in one place and a way to track your progress.</p>
- 
-          <ol class="about-steps">
-            <li><span class="step-roman">I</span><div><h3>Investigate</h3><p>Recover data. Spot inconsistencies.</p></div></li>
-            <li><span class="step-roman">II</span><div><h3>Reconstruct</h3><p>Cross-check evidence and rebuild a coherent, verified timeline.</p></div></li>
-            <li><span class="step-roman">III</span><div><h3>Build</h3><p>Turn your findings into a working application.</p></div></li>
+      <div class="hero__art">
+        <img src="assets/pocket-watch_sand.png" data-fb="9cb64.png" alt="Stopped golden pocket watch" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="label"><span class="num">01</span><span class="tag">About us</span><i></i></div>
+      <div class="about__grid">
+        <div>
+          <h2 class="display">When the AI <em>rewrites the past.</em></h2>
+          <p class="about__lead">Set in a future where an artificial intelligence system has destabilized the timeline, Chrono Hack challenges you to investigate the incident, recover critical information, reconstruct corrupted historical records and build a software solution to prevent reality from collapsing.</p>
+          <p class="about__text">Chrono Hack is a three-day, team-based hackathon hosted at ESI from 18 to 20 March 2027. It welcomes 120 students passionate about computer science, programming, cybersecurity, data analysis, algorithms and software development. The whole experience runs on a custom-built interactive website that acts as the event’s virtual time machine, with the challenges, datasets and stages in one place and a way to track your progress.</p>
+          <ol class="steps">
+            <li><span>I</span><div><h3>Investigate</h3><p>Recover data. Spot inconsistencies.</p></div></li>
+            <li><span>II</span><div><h3>Reconstruct</h3><p>Cross-check evidence and rebuild a coherent, verified timeline.</p></div></li>
+            <li><span>III</span><div><h3>Build</h3><p>Turn your findings into a working application.</p></div></li>
           </ol>
         </div>
- 
-        <aside class="mission-file" aria-label="Mission file">
-          <header class="mission-header"><span>Mission file</span> <span class="mission-level">Critical</span></header>
-          <dl class="mission-list">
+        <aside class="mission" aria-label="Mission file">
+          <div class="mission__head"><span>Mission file</span><span>Critical</span></div>
+          <dl>
             <div><dt>Event</dt><dd>Chrono Hack</dd></div>
-            <div><dt>Venue</dt><dd>ESI, Algiers</dd></div>
-            <div><dt>Dates</dt><dd><time datetime="2027-03-18">18</time> – <time datetime="2027-03-20">20 March 2027</time></dd></div>
+            <div><dt>Venue</dt><dd>Esi, Algiers</dd></div>
+            <div><dt>Dates</dt><dd><time datetime="2027-03-18">18</time> - <time datetime="2027-03-20">20 march 2027</time></dd></div>
             <div><dt>Participants</dt><dd>120 students</dd></div>
             <div><dt>Status</dt><dd>Timeline collapsing</dd></div>
           </dl>
-          <img src="assets/pocket-watch-blue.svg" alt="" class="mission-watch" width="120" height="150" loading="lazy" aria-hidden="true">
+          <div class="mission__art"><img src="assets/pocket-watch_blue.png" data-fb="cef15.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
         </aside>
       </div>
- 
-      <div class="about-decor" aria-hidden="true"></div>
-    </section>
-    <section class="stages" id="stages" data-page>
-      <header class="section-header"><span class="section-number">02</span> <span class="section-name">The stages</span></header>
- 
-      <h2>Three stages. Three timelines.</h2>
-      <p class="section-intro">Each stage represents a different point in the past or an alternate, corrupted timeline. What you recover in one stage becomes essential to the next.</p>
-      <div class="gear gear-stages" aria-hidden="true"></div>
- 
-      <ol class="timeline">
-        <li class="timeline-item timeline-left">
-          <article class="stage-card">
-            <p class="stage-date">Day 1 · <time datetime="2027-03-18">18 March</time></p>
+    </div>
+    <img class="deco deco--spiral" src="assets/spiral-clock-sand.png" data-fb="c4a6f.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  </section>
+
+  <!-- STAGES -->
+  <section class="stages" id="stages">
+    <div class="wrap">
+      <div class="label"><span class="num">02</span><span class="tag">The stages</span><i></i></div>
+      <h2 class="display stages__title">Three stages. <em>Three timelines.</em></h2>
+      <p class="lead">Each stage represents a different point in the past or an alternate, corrupted timeline. What you recover in one stage becomes essential to the next.</p>
+
+      <div class="timeline">
+        <article class="stage">
+          <div class="card">
+            <small>Day 1 · <time datetime="2027-03-18">18 march</time></small>
             <h3>Information recovery &amp; timeline reconstruction</h3>
             <p>You use the time machine to travel back to the moment of the experiment that caused the crisis. The system has locked the research archives and altered historical records, creating multiple versions of the same timeline. Solve security challenges, recover encrypted information and analyze corrupted datasets.</p>
-          </article>
-          <span class="timeline-marker">I</span>
-        </li>
- 
-        <li class="timeline-item timeline-right">
-          <span class="timeline-marker">II</span>
-          <article class="stage-card">
-            <p class="stage-date">Day 2 · <time datetime="2027-03-19">19 March</time></p>
+          </div>
+          <div class="dot" aria-hidden="true">I</div>
+        </article>
+        <article class="stage stage--right">
+          <div class="card">
+            <small>Day 2 · <time datetime="2027-03-19">19 march</time></small>
             <h3>Resolution and development</h3>
             <p>You return to the future, where the timeline is close to complete collapse. Combine the information you recovered and develop an application that addresses a defined objective, which may be proposed by our sponsors.</p>
-          </article>
-        </li>
- 
-        <li class="timeline-item timeline-left">
-          <article class="stage-card">
-            <p class="stage-date">Day 3 · <time datetime="2027-03-20">20 March</time></p>
+          </div>
+          <div class="dot" aria-hidden="true">II</div>
+        </article>
+        <article class="stage">
+          <div class="card">
+            <small>Day 3 · <time datetime="2027-03-20">20 march</time></small>
             <h3>Final presentation &amp; evaluation</h3>
             <p>Each team presents its application to a jury: the problem it addressed, a demo of the solution, and how it used the recovered information.</p>
-          </article>
-          <span class="timeline-marker">III</span>
-        </li>
-      </ol>
- 
+          </div>
+          <div class="dot" aria-hidden="true">III</div>
+        </article>
+        <img class="deco" style="right:6px;top:430px;width:114px" src="assets/gear-blue.png" data-fb="5ecd8.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+        <img class="deco" style="right:-60px;top:300px;width:150px;transform:rotate(-2deg)" src="assets/gear-ring-blue.png" data-fb="30298.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+
       <div class="outcomes">
-        <article class="outcome outcome-success"><p class="outcome-label">Success</p><h3>Fix the past</h3><p>The timeline is restored before it collapses completely.</p></article>
-        <article class="outcome outcome-failure"><p class="outcome-label">Failure</p><h3>The world collapses</h3><p>The timeline can't be saved and the world collapses completely.</p></article>
+        <div class="outcome outcome--win"><small>Success</small><h3>Fix the past</h3><p>The timeline is restored before it collapses completely.</p></div>
+        <div class="outcome outcome--lose"><small>Failure</small><h3>The world collapses</h3><p>The timeline can’t be saved and the world collapses completely.</p></div>
       </div>
-    </section>
-    <section class="faq" id="faq" data-page>
-      <header class="section-header"><span class="section-number">03</span> <span class="section-name">FAQ</span></header>
- 
-      <div class="faq-grid">
-        <div class="faq-intro">
-          <h2>Got questions? Our answers.</h2>
-          <p>Everything you need to know before the clock starts again.</p>
-          <div class="gear gear-faq" aria-hidden="true"></div>
-        </div>
- 
-        <div class="faq-list">
-          <div class="faq-item is-open">
-            <h3><button class="faq-question" aria-expanded="true" aria-controls="faq-a1" id="faq-q1">What is Chrono Hack? <span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>A three-day, team-based hackathon combining technical challenges, data analysis, algorithms and software development in a time-travel storyline.</p></div>
-          </div>
- 
-          <div class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">How does the event work? <span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2" hidden><p>TODO : réponse à rédiger.</p></div>
-          </div>
- 
-          <div class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">What skills do I need? <span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3" hidden><p>TODO : réponse à rédiger.</p></div>
-          </div>
- 
-          <div class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">What do we build on Day 3? <span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4" hidden><p>TODO : réponse à rédiger.</p></div>
-          </div>
- 
-          <div class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">What if we fail? <span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5" hidden><p>TODO : réponse à rédiger.</p></div>
-          </div>
- 
-          <div class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">Who can join, and how do I register? <span class="faq-icon" aria-hidden="true"></span></button></h3>
-            <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6" hidden><p>TODO : réponse à rédiger.</p></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="label"><span class="num">03</span><span class="tag">FAQ</span><i></i></div>
+      <div class="faq__grid">
+        <div>
+          <h2 class="display">Got questions? <em>Our answers.</em></h2>
+          <p class="lead">Everything you need to know before the clock starts again.</p>
+          <div class="faq__gears" aria-hidden="true">
+            <img class="faq__gear" src="assets/gear-sand.png" data-fb="bc347.png" alt="" loading="lazy" decoding="async">
+            <img class="faq__gear-ring" src="assets/gear-ring-sand.png" data-fb="42998.png" alt="" loading="lazy" decoding="async">
           </div>
         </div>
+        <div class="faq__list">
+          <details name="faq" open>
+            <summary>What is Chrono Hack?<b></b></summary>
+            <p>A three-day, team-based hackathon combining technical challenges, data analysis, algorithms and software development in a time-travel storyline.</p>
+          </details>
+          <details name="faq">
+            <summary>How does the event work?<b></b></summary>
+            <p>Over three days you move through the three stages: recover information, build an application, then present it to a jury.</p>
+          </details>
+          <details name="faq">
+            <summary>What skills do I need?<b></b></summary>
+            <p>An interest in programming, cybersecurity, data analysis, algorithms or software development. Teams are stronger when skills are mixed.</p>
+          </details>
+          <details name="faq">
+            <summary>What do we build on Day 3?<b></b></summary>
+            <p>Day 3 is the final presentation: each team demos its application to a jury and explains how it used the recovered information.</p>
+          </details>
+          <details name="faq">
+            <summary>What if we fail?<b></b></summary>
+            <p>If the timeline can’t be saved, the world collapses completely. That is the storyline, so do your best to fix the past.</p>
+          </details>
+          <details name="faq">
+            <summary>Who can join, and how do I register?<b></b></summary>
+            <p>The event welcomes 120 students passionate about computer science. Use the Register button to sign up.</p>
+          </details>
+        </div>
       </div>
-    </section>
- 
-    <section class="cta" id="contact-cta">
-      <div class="gear gear-cta" aria-hidden="true"></div>
-      <h2>The clock stopped working</h2>
+    </div>
+
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <img class="deco footer__deco" src="assets/gear-ring-sand.png" data-fb="42998.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+  <div class="wrap">
+    <div class="footer__cta">
+      <h2 class="display">The clock stopped <br>working</h2>
       <p>Join Chrono Hack and help us fix the timeline.</p>
       <a href="mailto:cse@esi.dz" class="btn">Write to us</a>
-    </section>
- 
-  </main>
- 
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <div class="footer-logos">
-        <img src="assets/logo-chronohack.png" alt="Chrono Hack" width="120" height="48" loading="lazy">
-        <img src="assets/logo-cse.png" alt="Club Scientifique de l'ESI" width="140" height="48" loading="lazy">
+    </div>
+    <div class="footer__cols">
+      <div>
+        <div class="footer__brand"><img src="assets/logo_chronohack.png" data-fb="59848.png" alt="Chrono Hack" loading="lazy"><img src="assets/cse-logo.png" data-fb="01e21.svg" alt="CSE – Club Scientifique de l’ESI" loading="lazy"></div>
+        <p>The clock stopped working. An event organized by our scientific club.</p>
       </div>
-      <p>The clock stopped working. An event organized by our scientific club.</p>
+      <nav aria-label="Footer navigation">
+        <h4>Navigation</h4>
+        <ul><li><a href="#top">Home</a></li><li><a href="#about">About us</a></li><li><a href="#stages">Stages</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </nav>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cse@esi.dz" target="_blank" rel="noopener">cse@esi.dz</a></li>
+          <li><a href="https://www.instagram.com/cse.club/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/cse-club/posts/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
- 
-    <nav class="footer-nav" aria-label="Footer navigation">
-      <h4>Navigation</h4>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#stages">Stages</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </nav>
- 
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=cse@esi.dz" target="_blank" rel="noopener">cse@esi.dz</a></li>
-        <li><a href="https://www.instagram.com/cse.club/" target="_blank" rel="noopener">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/company/cse-club/posts/" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
-    </div>
-  </footer>
+    <div class="footer__bottom"><span>© 2026 Chrono Hack. All rights reserved.</span><span class="tag">The clock stopped working</span></div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
 </body>
 </html>
