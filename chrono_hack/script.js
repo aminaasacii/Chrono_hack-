@@ -30,7 +30,7 @@ if (toggle && links) {
   if ("IntersectionObserver" in window) {
     const observedSections = [
       document.querySelector(".hero"),
-      ...["about", "stages", "faq"].map((id) => document.getElementById(id)),
+      ...["hero","about", "stages", "faq"].map((id) => document.getElementById(id)),
     ].filter(Boolean);
     const spy = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
