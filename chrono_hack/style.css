@@ -29,7 +29,7 @@ ul,ol{list-style:none}
 
 /* NAV */
 .nav{position:fixed;inset:0 0 auto;z-index:50;height:91px;background:rgba(22,30,59,.95);backdrop-filter:blur(10px);border-bottom:2px solid var(--sand)}
-.nav__bar{width:min(1184px,100% - 32px);height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.nav__bar{width:100%;height:100%;margin:0;padding-inline:clamp(16px,3.75vw,48px);display:flex;align-items:center;justify-content:space-between}
 .nav__logo img{width:128px}
 .nav__links{display:flex;align-items:center;gap:40px}
 .nav__links a:not(.btn){font:700 16px var(--deco);letter-spacing:.12em;text-transform:uppercase;color:#dbc798;padding:6px 0 8px;border-bottom:2px solid transparent;transition:.2s}
@@ -76,10 +76,14 @@ ul,ol{list-style:none}
 .mission dt{width:112px;flex:none;font-size:12px;letter-spacing:.17em;padding-top:5px;margin:0}
 .mission__art{background:var(--deep);height:204px;display:grid;place-items:center}
 .mission__art img{height:188px}
-.deco--spiral{right:-60px;bottom:0;width:190px;transform:rotate(90deg)}
+.deco--spiral{right:-60px;bottom:0;width:190px}
 
 /* STAGES */
-.stages{padding:90px 0;position:relative}
+.stages{padding:90px 0;position:relative;overflow:hidden}
+.stage--right{position:relative}
+.gear-edge{z-index:2}
+.gear-edge--ring{right:-57px;top:-148px;width:140px;transform:rotate(-2deg)}
+.gear-edge--solid{right:41px;top:-35px;width:108px}
 .stages__title{margin:30px 0 16px;max-width:704px;line-height:.81}
 .timeline{position:relative;margin-top:72px;display:flex;flex-direction:column;gap:56px}
 .timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--sand);opacity:.7;transform:translateX(-50%)}
@@ -158,3 +162,23 @@ details p{padding:0 25px 24px;opacity:.92}
   .stage .card{padding:26px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+/* HERO – match Figma */
+.hero .display{line-height:.94}
+.hero .lead{line-height:32.3px}
+.btn{padding:16.8px 33.6px}
+.btn--sm{padding:10px 22px}
+.facts{display:grid;grid-template-columns:148.19fr 293.14fr 216.47fr}
+.facts dt{margin-bottom:0}
+
+@media(min-width:1248px){
+  .hero__grid{align-items:start}
+  .hero__text{margin-top:48.17px}
+  .hero .lead{max-width:none}
+  .hero__art{position:absolute;left:618.5px;top:0;width:615px}
+}
+@media(max-width:1247px){
+  .hero .deco,.br-d{display:none}
+}
+@media(max-width:960px){
+  .facts{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+}
