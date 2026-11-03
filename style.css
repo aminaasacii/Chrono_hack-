@@ -82,8 +82,8 @@ ul,ol{list-style:none}
 .stages{padding:90px 0;position:relative;overflow:hidden}
 .stage--right{position:relative}
 .gear-edge{z-index:2}
-.gear-edge--ring{right:-57px;top:-148px;width:140px;transform:rotate(-2deg)}
-.gear-edge--solid{right:41px;top:-35px;width:108px}
+.gear-edge--ring{right: -151px;top:-148px;width:140px;transform:rotate(-2deg)}
+.gear-edge--solid{right:-68px;top:-30px;width:108px}
 .stages__title{margin:30px 0 16px;max-width:704px;line-height:.81}
 .timeline{position:relative;margin-top:72px;display:flex;flex-direction:column;gap:56px}
 .timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--sand);opacity:.7;transform:translateX(-50%)}
